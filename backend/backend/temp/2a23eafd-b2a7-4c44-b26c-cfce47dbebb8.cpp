@@ -1,0 +1,1 @@
+#include<iostream>\nint main(){std::cout<<"Hi!"; return 0;}
