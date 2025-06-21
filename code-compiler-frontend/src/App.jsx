@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { cpp } from "@codemirror/lang-cpp";
+import { oneDark } from "@codemirror/theme-one-dark";
+import "./App.css"; // Import your custom styles
 
 export default function App() {
   const [code, setCode] = useState(`#include <iostream>\nint main() {\n  std::cout << "Hello, world!";\n  return 0;\n}`);
@@ -32,29 +34,24 @@ export default function App() {
   };
 
   return (
-    <div style={{ maxWidth: 800, margin: "auto", padding: 20, fontFamily: "sans-serif" }}>
-      <h1>Code Snippet Compiler</h1>
+    <div className="container">
+      <h1>🧪 Code Snippet Compiler</h1>
+      <p className="description">Write C++ code, run it securely, and see the output instantly.</p>
+
       <CodeMirror
         value={code}
         height="300px"
         extensions={[cpp()]}
+        theme={oneDark}
         onChange={setCode}
       />
-      <button onClick={runCode} disabled={loading} style={{ marginTop: 10, padding: "10px 20px" }}>
+
+      <button onClick={runCode} disabled={loading} className="run-button">
         {loading ? "Running..." : "Run Code"}
       </button>
 
-      <h3>Output:</h3>
-      <pre
-        style={{
-          backgroundColor: "#f0f0f0",
-          padding: 10,
-          minHeight: 100,
-          color: "#333",            // Dark gray text
-          whiteSpace: "pre-wrap",   // Wrap long lines nicely
-        }}
-      >
-        {output}
+      <pre className="output-box">
+        {output || "Output will appear here."}
       </pre>
     </div>
   );
