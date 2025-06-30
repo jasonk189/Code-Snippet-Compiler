@@ -68,8 +68,8 @@ button:focus-visible {
 }
 
 .cm-line {
-  color: #abb2bf !important;       /* light gray text */
-  background-color: #282c34 !important;  /* dark background */
+  color: #abb2bf !important;
+  background-color: #282c34 !important;
 }
 
 .cm-editor {

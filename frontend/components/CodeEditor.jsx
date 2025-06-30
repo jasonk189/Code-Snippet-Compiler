@@ -1,4 +1,4 @@
-import CodeMirror from "@uiw/react-codemirror"; // or Monaco
+import CodeMirror from "@uiw/react-codemirror";
 import { cpp } from "@codemirror/lang-cpp";
 
 

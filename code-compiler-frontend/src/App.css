@@ -102,7 +102,7 @@ h1 {
 }
 
 .output-box {
-  text-align: left; /* 👈 Left-align output */
+  text-align: left;
   background-color: #282c34;
   color: #abb2bf;
   padding: 16px;

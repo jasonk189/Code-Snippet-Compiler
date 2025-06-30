@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { cpp } from "@codemirror/lang-cpp";
 import { oneDark } from "@codemirror/theme-one-dark";
-import "./App.css"; // Import your custom styles
+import "./App.css";
 
 export default function App() {
   const [code, setCode] = useState(`#include <iostream>\nint main() {\n  std::cout << "Hello, world!";\n  return 0;\n}`);
